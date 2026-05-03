@@ -3,12 +3,13 @@ import Footer from './components/Footer';
 import WhatsAppButton from './components/WhatsAppButton';
 import { catalogData } from './data';
 import { ArrowRight } from 'lucide-react';
+import heroImg from './assets/hero.png'; // Cambia a .jpg si tu imagen resulta ser JPG
 
 function App() {
   const waLink = "https://wa.me/593981343275?text=Hola,%20deseo%20el%20catálogo%20completo.";
 
   return (
-    <div className="min-h-screen bg-gray-50 font-sans">
+    <div className="min-h-screen bg-zinc-50 font-sans">
       <Navbar />
 
       {/* HERO SECTION */}
@@ -44,28 +45,28 @@ function App() {
       <section id="catalogo" className="py-20 bg-white">
         <div className="max-w-7xl mx-auto px-6">
           <div className="text-center mb-16">
-            <h2 className="text-3xl font-bold text-gray-900 uppercase tracking-wider mb-2">Nuestro Catálogo</h2>
-            <div className="h-1 w-20 bg-black mx-auto mb-4"></div>
-            <p className="text-gray-600">Explora nuestras líneas de productos destacadas</p>
+            <h2 className="text-3xl font-bold text-zinc-900 uppercase tracking-wider mb-2">Nuestro Catálogo</h2>
+            <div className="h-1 w-20 bg-zinc-900 mx-auto mb-4"></div>
+            <p className="text-zinc-600">Explora nuestras líneas de productos destacadas</p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
             {catalogData.map((item) => (
-              <div key={item.id} className="group bg-gray-50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-gray-100">
+              <div key={item.id} className="group bg-zinc-50 rounded-lg overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300 border border-zinc-200">
                 <div className="h-64 overflow-hidden relative">
                   <img 
                     src={item.image} 
                     alt={item.title} 
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <div className="absolute top-4 left-4 bg-black text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
+                  <div className="absolute top-4 left-4 bg-zinc-900 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider">
                     {item.category}
                   </div>
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                  <p className="text-gray-600 text-sm mb-4 line-clamp-2">{item.description}</p>
-                  <a href={waLink} target="_blank" rel="noreferrer" className="text-black font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
+                  <h3 className="text-xl font-bold text-zinc-900 mb-2">{item.title}</h3>
+                  <p className="text-zinc-600 text-sm mb-4 line-clamp-2">{item.description}</p>
+                  <a href={waLink} target="_blank" rel="noreferrer" className="text-zinc-900 font-semibold text-sm inline-flex items-center gap-1 hover:gap-2 transition-all">
                     Consultar precios <ArrowRight size={16} />
                   </a>
                 </div>
@@ -76,11 +77,11 @@ function App() {
       </section>
 
       {/* BANNER DE LLAMADO A LA ACCIÓN */}
-      <section className="bg-gray-900 text-white py-16">
+      <section className="bg-zinc-900 text-white py-16">
         <div className="max-w-4xl mx-auto px-6 text-center">
           <h2 className="text-3xl font-bold mb-4">¿Necesitas amoblar un proyecto completo?</h2>
-          <p className="text-gray-400 mb-8">Contáctanos para atención personalizada y cotizaciones al por mayor.</p>
-          <a href={waLink} target="_blank" rel="noreferrer" className="bg-green-500 text-white px-8 py-3 rounded font-bold hover:bg-green-600 transition-colors inline-block">
+          <p className="text-zinc-400 mb-8">Contáctanos para atención personalizada y cotizaciones al por mayor.</p>
+          <a href={waLink} target="_blank" rel="noreferrer" className="bg-green-600 text-white px-8 py-3 rounded font-bold hover:bg-green-700 transition-colors inline-block">
             Contactar por WhatsApp
           </a>
         </div>

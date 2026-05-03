@@ -12,26 +12,28 @@ function App() {
       <Navbar />
 
       {/* HERO SECTION */}
-      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-black overflow-hidden">
-        <div className="absolute inset-0 opacity-40">
+      <section className="relative pt-32 pb-20 lg:pt-48 lg:pb-32 bg-zinc-50 overflow-hidden">
+        <div className="absolute inset-0">
           <img 
-            src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
-            alt="Fondo de oficina" 
+            src={heroImg} 
+            alt="Fondo de Muebles Víctor" 
             className="w-full h-full object-cover"
           />
+          {/* Capa clara para asegurar que el texto oscuro sea legible */}
+          <div className="absolute inset-0 bg-white/80"></div>
         </div>
         <div className="relative max-w-7xl mx-auto px-6 text-center z-10">
-          <h1 className="text-4xl md:text-6xl font-extrabold text-white mb-6 tracking-tight">
-            Diseño, Confort y <span className="text-gray-400">Elegancia</span>
+          <h1 className="text-4xl md:text-6xl font-extrabold text-zinc-900 mb-6 tracking-tight">
+            Diseño, Confort y <span className="text-zinc-500">Elegancia</span>
           </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-2xl mx-auto mb-10">
-            Fabricantes directos de mobiliario de alta calidad para oficinas, hogares, salas de espera y auditorios. Catálogo 2026 ya disponible.
+          <p className="text-lg md:text-xl text-zinc-700 max-w-2xl mx-auto mb-10">
+            Fabricantes directos de mobiliario de alta calidad para oficinas, hogares, salas de espera y auditorios. Catálogo 2025 ya disponible.
           </p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <a href="#catalogo" className="bg-white text-black px-8 py-4 rounded font-bold hover:bg-gray-200 transition-colors">
+            <a href="#catalogo" className="bg-zinc-900 text-white px-8 py-4 rounded font-bold hover:bg-zinc-800 transition-colors">
               Ver Colecciones
             </a>
-            <a href={waLink} target="_blank" rel="noreferrer" className="border border-white text-white px-8 py-4 rounded font-bold hover:bg-white hover:text-black transition-colors flex items-center justify-center gap-2">
+            <a href={waLink} target="_blank" rel="noreferrer" className="border-2 border-zinc-900 text-zinc-900 px-8 py-4 rounded font-bold hover:bg-zinc-900 hover:text-white transition-colors flex items-center justify-center gap-2">
               Cotizar ahora <ArrowRight size={20} />
             </a>
           </div>
